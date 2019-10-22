@@ -1,69 +1,18 @@
-<!DOCTYPE html>
-<html>
-<style type="text/css">
-	
-
-
-	.wrapper {
-	width: 100%;
-	height: 100%;
-}
-
-.box {
-	width: 2000px;
-	height: 1000px;
-	background-color: transparent;
-	text-align: center;
-}
-
-.rgb{
-	margin: 0 auto;
-	font-family: Arial, 'san-sefif';
-}
-</style>
-<body class="body" >
-<div class="wrapper">
-			<div class="box" id="box">
-				<div class="rgb" id="rgb">
-				</div>
-				<button onclick="changeColor()">Change Color Now</button>
-			</div>
-		</div>
-
-<script type="text/javascript">
-	// const body = document.querySelector(".body");
-
-	// function changeColor(e){
-	// 	//var color = randomColor();
-	// 	body.style.background-color = randomColors();
-	// }
-
-
-	function changeColor(){
-	var newColor = makeColor();
-	var box = document.getElementById('box').style.backgroundColor = newColor;
-	document.getElementById('rgb').innerHTML = newColor;
-}
-	function makeColor(){
-	var arr = [];
-	for(var i = 0; i < 20; i++){
-		var num = Math.floor(Math.random() * 256);
-		arr.push(num);
-	}
-	var newRgb = 'rgb(' + arr[0] + ',' + arr[1] + ',' + arr[2] + ')';
-	return newRgb;
-}
-	// body.addEventListener("click",changeColor(),false);
-
-
-
-</script>
-
-
+<!DOCTYPE html >
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+</head>
+<body > 
+        <script>
+            function ChangeColor(){
+                var x = Math.floor(Math.random() * 256);
+                var y = Math.floor(Math.random() * 256);
+                var z = Math.floor(Math.random() * 256);
+                var color = "rgb(" + x + "," + y + "," + z + ")";
+                document.body.style.background=color;
+            }
+            document.onclick=ChangeColor;
+        </script>
 </body>
 </html>
-
-
-
-
-
